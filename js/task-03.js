@@ -19,9 +19,8 @@ const images = [
 
 const ulList = document.querySelector('#gallery');
 
-const createImageList = elements => {
-  elements.map(element => 
-  ulList.insertAdjacentHTML('afterbegin',`<li><img src=${element.url} alt=${element.alt}></li>`)
-  )
-}
+const createImageList = elements => elements.map(element => 
+  ulList.insertAdjacentHTML('afterbegin',`<li><img src=${element.url} alt=${element.alt}></li>`))
+  .join('');
+
 createImageList(images);
